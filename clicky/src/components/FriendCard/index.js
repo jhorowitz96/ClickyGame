@@ -8,20 +8,20 @@ function FriendCard(props) {
         <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-          <li>
+
+          {/* <li>
+            {/* <strong>Name</strong> {props.name} */}
+          
+          {/* <li>
             <strong>Occupation:</strong> {props.occupation}
           </li>
           <li>
             <strong>Location:</strong> {props.location}
-          </li>
-        </ul>
+          </li> */}
+        
       </div>
       <span onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
+        {/* 𝘅 */}
       </span>
     </div>
   );
