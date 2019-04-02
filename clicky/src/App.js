@@ -3,6 +3,7 @@ import FriendCard from "./components/FriendCard/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import Header from "./components/Header"
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -35,7 +36,7 @@ class App extends Component {
         status: "You Won!",
         clickedFriendIDs: []
       });
-      alert("Wanna play again?")
+      alert("You got the whole office. Wanna play again?")
       return;
     }
 
@@ -64,6 +65,11 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <Header>
+        <p style={{textAlign: "center", color: "white"}}>Don't click a photo more than once. Try and get all 12 Dunder Mifflinites!</p>
+          <h4 style={{textAlign: "center", color: "white"}}>Score: {this.state.score} | Top Score: {this.state.topScore}</h4>
+          {/* <h5 style={{textAlign: "center", color: "white"}}>{this.state.status}</h5> */}
+        </Header>
         <Title>The Office Memory Game</Title>
         {this.state.friends.map(friend => (
           <FriendCard
